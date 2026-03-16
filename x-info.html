@@ -368,3 +368,60 @@
   </script>
 </body>
 </html>
+
+
+<!-- Architecture Diagram (inline SVG)  Take out temperarily for testing building purposes. -->
+<div class="d-flex justify-content-center mt-5" id="Architecture">
+        <div class="card bg-dark shadow-sm arch-diagram w-100">
+          <div class="card-body">
+            <h3 class="h6 mb-3">High‑Level Architecture</h3>
+            <svg viewBox="0 0 960 360" width="100%" height="auto" role="img" aria-label="Architecture diagram">
+              <!-- Background -->
+              <rect x="0" y="0" width="960" height="360" fill="transparent" stroke="rgba(255,255,255,0.08)" />
+
+              <!-- Data Streams -->
+              <rect x="40" y="40" width="200" height="80" rx="12" fill="rgba(100,255,218,0.1)" stroke="rgba(100,255,218,0.5)" />
+              <text x="140" y="85" text-anchor="middle" fill="#a3b0c2" font-size="14">Market / On‑Chain Streams</text>
+              <text x="140" y="105" text-anchor="middle" fill="#e6f1ff" font-size="12">WebSocket, RPC, Webhooks</text>
+
+              <!-- Event Bus -->
+              <rect x="280" y="60" width="180" height="40" rx="10" fill="rgba(154,107,255,0.1)" stroke="rgba(154,107,255,0.5)" />
+              <text x="370" y="85" text-anchor="middle" fill="#e6f1ff" font-size="13">Event Router</text>
+
+              <!-- Agents -->
+              <rect x="500" y="30" width="200" height="80" rx="12" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.2)" />
+              <text x="600" y="65" text-anchor="middle" fill="#e6f1ff" font-size="13">AI Decisioning & Guardrails</text>
+              <text x="600" y="85" text-anchor="middle" fill="#a3b0c2" font-size="12">Playbooks, Risk, Policy</text>
+
+              <!-- Execution -->
+              <rect x="760" y="40" width="160" height="80" rx="12" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.2)" />
+              <text x="840" y="75" text-anchor="middle" fill="#e6f1ff" font-size="13">Execution Adapters</text>
+              <text x="840" y="95" text-anchor="middle" fill="#a3b0c2" font-size="12">CEX / DEX / Wallets</text>
+
+              <!-- Control Plane -->
+              <rect x="280" y="150" width="280" height="60" rx="12" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.2)" />
+              <text x="420" y="185" text-anchor="middle" fill="#e6f1ff" font-size="13">Control Plane (Auth, Keys, Audit)</text>
+
+              <!-- Monitoring -->
+              <rect x="600" y="150" width="200" height="60" rx="12" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.2)" />
+              <text x="700" y="185" text-anchor="middle" fill="#e6f1ff" font-size="13">Monitoring & Alerts</text>
+
+              <!-- Lines -->
+              <line x1="240" y1="80" x2="280" y2="80" stroke="rgba(255,255,255,0.35)" />
+              <line x1="460" y1="80" x2="500" y2="70" stroke="rgba(255,255,255,0.35)" />
+              <line x1="700" y1="70" x2="760" y2="80" stroke="rgba(255,255,255,0.35)" />
+
+              <line x1="420" y1="150" x2="600" y2="150" stroke="rgba(255,255,255,0.2)" />
+              <line x1="380" y1="150" x2="380" y2="100" stroke="rgba(255,255,255,0.2)" />
+              <line x1="700" y1="150" x2="700" y2="120" stroke="rgba(255,255,255,0.2)" />
+
+              <!-- User -->
+              <rect x="40" y="220" width="200" height="80" rx="12" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.2)" />
+              <text x="140" y="255" text-anchor="middle" fill="#e6f1ff" font-size="13">User Console / API</text>
+              <text x="140" y="275" text-anchor="middle" fill="#a3b0c2" font-size="12">Policies, Budgets, Overrides</text>
+
+              <line x1="240" y1="260" x2="280" y2="180" stroke="rgba(255,255,255,0.35)" />
+            </svg>
+          </div>
+        </div>
+      </div>

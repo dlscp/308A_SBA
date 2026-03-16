@@ -2,35 +2,7 @@
    CipherFlux – Bootstrap v2
    - Temp email generator (demo mode)
    - Newsletter submit flow
-   - Theme toggle (Bootstrap data-bs-theme)
    ========================================================== */
-
-(function() {
-  const $ = (sel, ctx = document) => ctx.querySelector(sel);
-
-  const state = { tempEmail: null, expiryAt: null, expiryTimer: null };
-
-  // ---- THEME TOGGLE (Bootstrap 5.3 data theme) ----
-  const themeToggle = $("#themeToggle");
-  const root = document.documentElement;
-  const storedTheme = localStorage.getItem("bs-theme");
-  if (storedTheme) {
-    root.setAttribute("data-bs-theme", storedTheme);
-    themeToggle.setAttribute("aria-pressed", storedTheme === "dark");
-    themeToggle.textContent = storedTheme === "dark" ? "🌙" : "☀️";
-  } else {
-    const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-    root.setAttribute("data-bs-theme", prefersDark ? "dark" : "light");
-    themeToggle.setAttribute("aria-pressed", prefersDark);
-    themeToggle.textContent = prefersDark ? "🌙" : "☀️";
-  }
-  themeToggle?.addEventListener("click", () => {
-    const next = root.getAttribute("data-bs-theme") === "dark" ? "light" : "dark";
-    root.setAttribute("data-bs-theme", next);
-    localStorage.setItem("bs-theme", next);
-    themeToggle.setAttribute("aria-pressed", next === "dark");
-    themeToggle.textContent = next === "dark" ? "🌙" : "☀️";
-  });
 
   // ---- TEMP EMAIL (demo) ----
   function demoGenerateTempEmail({ purpose }) {
@@ -90,7 +62,7 @@
   $("#generateTempEmail")?.addEventListener("click", async () => {
     const consent = $("#privacyConsent")?.checked;
     if (!consent) {
-      alert("Please agree to the Privacy Policy to generate a temporary email.");
+      alert("Please select to generate a temporary email.");
       return;
     }
     const spinner = $("#genSpinner");

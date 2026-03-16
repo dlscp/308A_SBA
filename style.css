@@ -34,3 +34,32 @@
 
 /* Optional: lighten border and section dividers on very dark bg */
 .border-secondary-subtle { border-color: rgba(255,255,255,0.08) !important; }
+
+
+    :root {
+      --cf-bg: #0c0f14;
+      --cf-cyan: #64ffda;
+      --cf-purple: #9a6bff;
+    }
+    body { background:
+      radial-gradient(1200px 800px at 70% -20%, rgba(100,255,218,0.08), transparent 60%),
+      radial-gradient(800px 600px at -10% 10%, rgba(154,107,255,0.08), transparent 60%),
+      var(--cf-bg);
+    }
+    .gradient-text { background: linear-gradient(90deg, var(--cf-cyan), var(--cf-purple)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .hero {
+      padding: 56px 0 24px;
+    }
+    .badge-soft { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); }
+    .section { padding: 56px 0; }
+    .card.bg-dark { background: linear-gradient(180deg, rgba(18,24,38,0.95), rgba(15,21,34,0.95)); border: 1px solid rgba(255,255,255,0.08); }
+    .pill { border-radius: 999px; }
+    .arch-diagram { max-width: 940px; }
+    .logo-mark { filter: drop-shadow(0 6px 18px rgba(100,255,218,0.25)); }
+    .foot { border-top: 1px solid rgba(255,255,255,0.08); }
+    .list-checks li::marker { content: "✔ "; color: var(--cf-cyan); }
+    .list-dashes { list-style: "—  "; padding-left: 1rem; }
+    .list-dashes li { margin-bottom: .25rem; }
+    .trust-strip { background: rgba(18,24,38,0.6); border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .mini { font-size: .9rem; }
+    .callout { background: rgba(100,255,218,0.08); border: 1px solid rgba(100,255,218,0.22); }
