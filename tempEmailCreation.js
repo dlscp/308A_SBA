@@ -337,6 +337,10 @@
 // })();
 
 
+
+
+
+///////////////////////////////////////////////////////////
 /**
  * tempEmailCreation.js (BROWSER / NO NODE / SINGLE FILE)
  * - Mail.tm client (domains -> accounts -> token -> messages -> me -> delete)
@@ -346,6 +350,8 @@
  * Requirements:
  * - Serve page from http://localhost (VS Code Live Server / any local server)
  */
+///////////////////////////////////////////////////////////
+
 
 (() => {
   "use strict";
@@ -681,7 +687,7 @@
         })
       );
 
-      showStatus("Temporary email created ✅", "success");
+      showStatus("Temporary email created", "success");
     } catch (err) {
       console.error(err);
       showStatus(`Could not generate temp email: <strong>${err.message}</strong>`, "danger");
@@ -759,11 +765,11 @@
         const result = await t.fn();
         const ms = Math.round(performance.now() - start);
         pass++;
-        console.log(`✅ PASS: ${t.name} (${ms}ms)`, result ?? "");
+        console.log(`PASS: ${t.name} (${ms}ms)`, result ?? "");
       } catch (err) {
         const ms = Math.round(performance.now() - start);
         fail++;
-        console.error(`❌ FAIL: ${t.name} (${ms}ms)`);
+        console.error(`FAIL: ${t.name} (${ms}ms)`);
         console.error(err);
       }
     }

@@ -25,4 +25,4 @@ perfect. lets make a are you gulible site..
 
 website will be focused on having visitors sign up to quickly create a temporary email so they can get the perks of the free tokens and crytpo gift upon sign up. 
 
-i wan to use the other api to also let me know if user has used a fake email or not
+This is a scam ai crypto site. It encourages the user to generate temperary email in order to recive an exclusive code to then do scammy stuff. I have three modules, send newsletter, inbox handling and temp email creation. 
