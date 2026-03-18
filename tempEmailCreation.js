@@ -92,7 +92,7 @@
 
     // Tests on load - create random account
     async createOneAccount(useUUID = false) {
-      // 1) Get a domain
+      //  Get a domain
       const domainRes = await this.getDomains();
       if (!domainRes.status) return domainRes;
 
@@ -112,12 +112,12 @@
 
       const username = `${usernameLocal}@${domain}`;
 
-      // 3) Generate password & register
+      // Generate password & register
       const password = this._generateHash(10);
       const registerRes = await this.register(username, password);
       if (!registerRes.status) return registerRes;
 
-      // 4) Login => token set on instance
+      // Login => token set on instance
       const loginRes = await this.login(username, password);
       if (!loginRes.status) return loginRes;
 

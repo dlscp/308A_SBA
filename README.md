@@ -34,3 +34,9 @@ i have tests run on load of page that also creates a temp email, lets me know if
 theres an svg error but im ignoring that for now since it doesn't break anything. sometimes the api gets too many calls, i just needvto go home and reload page.
 
 i have the three modules, temp email creation, newletter demo, and inbox demo. i used bootstrap for styling but some custom css in style.css
+
+http://127.0.0.1:5500/308A_SBA/index.html   -- starting point
+
+used the mail.tm documentation and refrenced examples they link to on github. the api requiremnets are met
+
+removed the delete function - didn't get around to actually making the function
