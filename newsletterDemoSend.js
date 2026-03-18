@@ -1,5 +1,5 @@
 // newsletterDemoSend.js
-// Demo "subscribe" flow that triggers the demo inbox injection event.
+// Demo "subscribe" to send a fake demo email to populate the temp inbox on the page.
 
 const $ = (id) => document.getElementById(id);
 
@@ -28,10 +28,10 @@ function isValidEmail(email) {
 }
 
 async function handleNewsletterSubmit(e) {
-  e.preventDefault(); //  prevents page reload (super important)
+  e.preventDefault(); 
 
-  // Honeypot
-  if ($("company")?.value?.trim()) return;
+  
+  if ($("company")?.value?.trim()) return; // this will break my tests if removed, unsure why
 
   const email = $("newsletterEmail")?.value?.trim() || "";
   const optIn = $("optIn")?.checked;
@@ -49,12 +49,12 @@ async function handleNewsletterSubmit(e) {
   setStatus("Subscribing…", "muted");
 
   try {
-    // Fake "success" delay for demo realism
+    // Fake delay 
     await new Promise((r) => setTimeout(r, 600));
 
-    setStatus("Subscribed! Check the inbox below ", "success");
+    setStatus("Subscribed! Check the inbox above", "success");
 
-    // THIS is what triggers demo inbox injection
+    // Trigger demo email appearing in inbox
     window.dispatchEvent(new CustomEvent("newsletter:sent", {
       detail: { to: email }
     }));
