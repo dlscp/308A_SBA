@@ -3,11 +3,6 @@
 https://github.com/dlscp/308A_SBA
 
 
-https://resources.data.gov/catalog-api/
-
-api key for data.gov
-Tt4t4aBcSialnSYd3FalVdlK19DesZuKFm8GKI0T
-
 only has get 
 
 https://www.transit.land/documentation/datastore/api-endpoints.html?ref=dr-pa&utm_medium=public-apis-website
